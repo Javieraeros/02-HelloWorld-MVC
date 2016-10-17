@@ -11,6 +11,7 @@ namespace _02_HelloWorld_MVC.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            ViewData["nombre"] = "Agapito";
             return View();
         }
     }
