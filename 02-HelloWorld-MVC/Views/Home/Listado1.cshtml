@@ -1,0 +1,44 @@
+﻿@model List<_02_HelloWorld_MVC.Models.Persona>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Apellidos
+            </th>
+            <th>
+                Fecha Nacimiento
+            </th>
+        </tr>
+        @for (int i=0;i<Model.Count;i++)
+        {
+            <tr>
+                <td>
+                    @Model.ElementAt(i).Nombre
+                </td>
+                <td>
+                    @Model.ElementAt(i).Apellidos
+                </td>
+                <td>
+                    @Model.ElementAt(i).FechaNac
+                </td>
+            </tr>
+        }
+    </table>
+    <img src="~/Content/magic.gif" />
+</body>
+</html>

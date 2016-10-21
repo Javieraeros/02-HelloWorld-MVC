@@ -1,4 +1,4 @@
-﻿
+﻿@model _02_HelloWorld_MVC.Models.Persona
 @{
     Layout = null;
 }
@@ -13,6 +13,15 @@
 <body>
     <div> 
         <h2>Hola @ViewData["nombre"] desde la vista!</h2>
+        <h3>Este es un mensaje de @ViewBag.autor</h3>
+    </div>
+    <div>
+        <h2>Hola @Model.Nombre desde la vista!</h2>
+        <h3>tus apellidos son: @Model.Apellidos</h3>
+        <h3>Y tu fecha de nacimiento: @Model.FechaNac</h3>
+    </div>
+    <div>
+        @Html.ActionLink("Púlsame", "Listado");
     </div>
 </body>
 </html>
